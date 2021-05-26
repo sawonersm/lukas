@@ -1,0 +1,313 @@
+version: "2.0"
+nlu:
+- intent: greetings
+  examples: |
+    - hola
+    - buenas
+    - buenos dias
+    - buenas tardes
+    - muy buenas
+
+- intent: thanks
+  examples: |
+    - muchas gracias
+    - gracias
+    - muchisimas gracias
+
+- intent: affirm
+  examples: |
+    - si
+    - si, por favor
+    - por favor
+    - claro
+    - afirmativo
+
+- intent: favourite_pokemon
+  examples: |
+    - cual es tu pokemon favorito
+    - tienes algun pokemon favorito
+    - cual es el mejor pokemon
+
+- intent: deny
+  examples: |
+    - no
+    - paso
+    - nop
+
+- intent: bot
+  examples: |
+    - eres un bot
+    - eres un humano
+    - quien eres
+    - eres de verdad
+    - que eres
+    - como eres
+    - eres chico o chica
+    - cual es tu genero
+
+- intent: need_insurance
+  examples: |
+    - quiero un seguro
+    - necesito un seguro
+- intent: need_insurance_car
+  examples: |
+    - quiero un seguro de coche
+    - necesito un seguro de coche
+    - de coche
+- intent: cmb_activate
+  examples: |
+    - llamadme
+    - podeis llamarme
+    - ayuda
+    - necesito ayuda
+    - aiuda
+- intent: car_not_found
+  examples: |
+    - no encuentro mi modelo
+    - no encuentro mi coche
+    - no encuentro la version de mi coche
+    - no veo mi coche
+    - mi coche no aparece
+    - mi coche no esta
+- intent: cancel_insurance_after_booking
+  examples: |
+    - puedo anular despues de contratar
+    - puedo anular mi seguro despues de contratar
+    - podria cancelar mi seguro despues de haberlo contratado
+    - es posible anular despues de haber realizado la contratacion
+- intent: cancel_insurance
+  examples: |
+    - puedo anular mi seguro
+    - quiero anular mi seguro
+    - puedo cancelar mi seguro
+    - quiero cancelar mi seguro
+- intent: compare_insurance_needed_documentation
+  examples: |
+    - que documentacion necesito para comparar mi seguro de coche
+    - que documentacion necesito para comparar mi seguro de moto
+    - que necesito para comparar un seguro
+    - que necesito para comparar el seguro de moto
+    - que necesito para comparar el seguro de coche
+- intent: is_insurance_mandatory
+  examples: |
+    - ¿es obligatorio contratar un seguro?
+    - ¿Necesito un seguro de coche?
+    - ¿es obligatorio tener seguro?
+- intent: what_is_mandatory_civil_liability
+  examples: |
+    - ¿Qué es la cobertura de responsabilidad civil del seguro?
+    - ¿Qué cubre la cobertura de responsabilidad civil del seguro?
+    - ¿Qué es responsabilidad civil obligatoria?
+- intent: inform
+  examples: |
+    - mi nombre es [carlos](cmb_name)
+    - me llamo [carlos](cmb_name)
+    - mi telefono es [656747324](cmb_phone)
+    - mi movil es [656747324](cmb_phone)
+    - [656802721](cmb_phone)
+    - mi telefono es [656802721](cmb_phone)
+    - mi numero es [656473221](cmb_phone)
+    - [JOSE](cmb_name)
+    - [ANTONIO](cmb_name)
+    - [JUAN](cmb_name)
+    - [MANUEL](cmb_name)
+    - [FRANCISCO](cmb_name)
+    - [LUIS](cmb_name)
+    - [JAVIER](cmb_name)
+    - [MIGUEL](cmb_name)
+    - [CARLOS](cmb_name)
+    - [ANGEL](cmb_name)
+    - [JESUS](cmb_name)
+    - [DAVID](cmb_name)
+    - [PEDRO](cmb_name)
+    - [DANIEL](cmb_name)
+    - [ALEJANDRO](cmb_name)
+    - [MARIA](cmb_name)
+    - [ALBERTO](cmb_name)
+    - [RAFAEL](cmb_name)
+    - [FERNANDO](cmb_name)
+    - [PABLO](cmb_name)
+    - [JORGE](cmb_name)
+    - [RAMON](cmb_name)
+    - [SERGIO](cmb_name)
+    - [ENRIQUE](cmb_name)
+    - [ANDRES](cmb_name)
+    - [DIEGO](cmb_name)
+    - [VICENTE](cmb_name)
+    - [VICTOR](cmb_name)
+    - [ADRIAN](cmb_name)
+    - [IGNACIO](cmb_name)
+    - [ALVARO](cmb_name)
+    - [RAUL](cmb_name)
+    - [EDUARDO](cmb_name)
+    - [IVAN](cmb_name)
+    - [OSCAR](cmb_name)
+    - [JOAQUIN](cmb_name)
+    - [RUBEN](cmb_name)
+    - [SANTIAGO](cmb_name)
+    - [ROBERTO](cmb_name)
+    - [MARIO](cmb_name)
+    - [GABRIEL](cmb_name)
+    - [ALFONSO](cmb_name)
+    - [JAIME](cmb_name)
+    - [MARCOS](cmb_name)
+    - [RICARDO](cmb_name)
+    - [JULIO](cmb_name)
+    - [EMILIO](cmb_name)
+    - [SALVADOR](cmb_name)
+    - [HUGO](cmb_name)
+    - [GUILLERMO](cmb_name)
+    - [TOMAS](cmb_name)
+    - [JULIAN](cmb_name)
+    - [MARTIN](cmb_name)
+    - [JORDI](cmb_name)
+    - [MOHAMED](cmb_name)
+    - [NICOLAS](cmb_name)
+    - [AGUSTIN](cmb_name)
+    - [FELIX](cmb_name)
+    - [GONZALO](cmb_name)
+    - [CRISTIAN](cmb_name)
+    - [CESAR](cmb_name)
+    - [JOSEP](cmb_name)
+    - [JOAN](cmb_name)
+    - [MARC](cmb_name)
+    - [SEBASTIAN](cmb_name)
+    - [SAMUEL](cmb_name)
+    - [DOMINGO](cmb_name)
+    - [FELIPE](cmb_name)
+    - [ISMAEL](cmb_name)
+    - [ALFREDO](cmb_name)
+    - [HECTOR](cmb_name)
+    - [LUCAS](cmb_name)
+    - [MARIANO](cmb_name)
+    - [AITOR](cmb_name)
+    - [ALEX](cmb_name)
+    - [RODRIGO](cmb_name)
+    - [IKER](cmb_name)
+    - [XAVIER](cmb_name)
+    - [ESTEBAN](cmb_name)
+    - [GREGORIO](cmb_name)
+    - [ALEXANDER](cmb_name)
+    - [MARCO](cmb_name)
+    - [ARTURO](cmb_name)
+    - [LORENZO](cmb_name)
+    - [MATEO](cmb_name)
+    - [ALBERT](cmb_name)
+    - [BORJA](cmb_name)
+    - [EUGENIO](cmb_name)
+    - [CRISTOBAL](cmb_name)
+    - [AARON](cmb_name)
+    - [JOEL](cmb_name)
+    - [DARIO](cmb_name)
+    - [VALENTIN](cmb_name)
+    - [ISAAC](cmb_name)
+    - [GERMAN](cmb_name)
+    - [JONATHAN](cmb_name)
+    - [ADOLFO](cmb_name)
+    - [CHRISTIAN](cmb_name)
+    - [PAU](cmb_name)
+    - [ERIC](cmb_name)
+    - [MARIA](cmb_name)
+    - [CARMEN](cmb_name)
+    - [ANA](cmb_name)
+    - [ISABEL](cmb_name)
+    - [DOLORES](cmb_name)
+    - [PILAR](cmb_name)
+    - [TERESA](cmb_name)
+    - [ROSA](cmb_name)
+    - [JOSEFA](cmb_name)
+    - [CRISTINA](cmb_name)
+    - [ANGELES](cmb_name)
+    - [LAURA](cmb_name)
+    - [ANTONIA](cmb_name)
+    - [ELENA](cmb_name)
+    - [MARTA](cmb_name)
+    - [FRANCISCA](cmb_name)
+    - [LUCIA](cmb_name)
+    - [MERCEDES](cmb_name)
+    - [LUISA](cmb_name)
+    - [CONCEPCION](cmb_name)
+    - [ROSARIO](cmb_name)
+    - [JOSE](cmb_name)
+    - [PAULA](cmb_name)
+    - [SARA](cmb_name)
+    - [RAQUEL](cmb_name)
+    - [JUANA](cmb_name)
+    - [MANUELA](cmb_name)
+    - [EVA](cmb_name)
+    - [ROCIO](cmb_name)
+    - [BEATRIZ](cmb_name)
+    - [PATRICIA](cmb_name)
+    - [JESUS](cmb_name)
+    - [VICTORIA](cmb_name)
+    - [JULIA](cmb_name)
+    - [BELEN](cmb_name)
+    - [ANDREA](cmb_name)
+    - [SILVIA](cmb_name)
+    - [ENCARNACION](cmb_name)
+    - [ALBA](cmb_name)
+    - [ESTHER](cmb_name)
+    - [NURIA](cmb_name)
+    - [IRENE](cmb_name)
+    - [MONTSERRAT](cmb_name)
+    - [ANGELA](cmb_name)
+    - [SANDRA](cmb_name)
+    - [INMACULADA](cmb_name)
+    - [MONICA](cmb_name)
+    - [ALICIA](cmb_name)
+    - [YOLANDA](cmb_name)
+    - [SONIA](cmb_name)
+    - [MAR](cmb_name)
+    - [MARINA](cmb_name)
+    - [MARGARITA](cmb_name)
+    - [SUSANA](cmb_name)
+    - [NATALIA](cmb_name)
+    - [CLAUDIA](cmb_name)
+    - [SOFIA](cmb_name)
+    - [CAROLINA](cmb_name)
+    - [AMPARO](cmb_name)
+    - [INES](cmb_name)
+    - [GLORIA](cmb_name)
+    - [NIEVES](cmb_name)
+    - [VERONICA](cmb_name)
+    - [LOURDES](cmb_name)
+    - [SOLEDAD](cmb_name)
+    - [CARLA](cmb_name)
+    - [ALEJANDRA](cmb_name)
+    - [DANIELA](cmb_name)
+    - [LUZ](cmb_name)
+    - [NOELIA](cmb_name)
+    - [LORENA](cmb_name)
+    - [BEGOÑA](cmb_name)
+    - [FATIMA](cmb_name)
+    - [CONSUELO](cmb_name)
+    - [ASUNCION](cmb_name)
+    - [OLGA](cmb_name)
+    - [BLANCA](cmb_name)
+    - [NEREA](cmb_name)
+    - [MIRIAM](cmb_name)
+    - [ESPERANZA](cmb_name)
+    - [MILAGROS](cmb_name)
+    - [CLARA](cmb_name)
+    - [CATALINA](cmb_name)
+    - [LIDIA](cmb_name)
+    - [AURORA](cmb_name)
+    - [CELIA](cmb_name)
+    - [MAGDALENA](cmb_name)
+    - [ANNA](cmb_name)
+    - [EMILIA](cmb_name)
+    - [ADRIANA](cmb_name)
+    - [ELISA](cmb_name)
+    - [MARTINA](cmb_name)
+    - [EUGENIA](cmb_name)
+    - [VANESA](cmb_name)
+    - [VIRGINIA](cmb_name)
+    - [AINHOA](cmb_name)
+    - [GEMA](cmb_name)
+    - [JOSEFINA](cmb_name)
+    - [PURIFICACION](cmb_name)
+    - [DIANA](cmb_name)
+- regex: cmb_phone
+  examples: |
+    - \\d{9}\b
+    

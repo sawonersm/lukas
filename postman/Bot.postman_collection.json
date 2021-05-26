@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "5f5d8881-7c27-4bab-ae10-06bc28716cfc",
+		"name": "Bot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conversation",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20202/conversation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20202",
+							"path": [
+								"conversation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"Hola!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20202/conversation/c6259682-61d3-436c-b889-e38872679f86/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20202",
+							"path": [
+								"conversation",
+								"c6259682-61d3-436c-b889-e38872679f86",
+								"message"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

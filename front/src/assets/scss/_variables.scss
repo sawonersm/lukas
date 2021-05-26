@@ -1,0 +1,23 @@
+$color-primary: #0271c2;
+$color-accent: green;
+$color-subtitle: grey;
+$color-disabled: #e8e8e8;
+$color-border: #dadada;
+
+$color-text-primary: white;
+$color-text-accent: white;
+$color-text-disabled: black;
+
+$text-size-sm: 16px;
+$text-size-xl: 20px;
+$text-size-xxl: 24px;
+
+$what-navigation-width: 350px;
+
+@mixin elevation-regular {
+  box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
+}
+
+@mixin elevation-small {
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}

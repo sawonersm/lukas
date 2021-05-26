@@ -1,0 +1,96 @@
+version: "2.0"
+
+rules:
+
+- rule: Greeetings
+  steps:
+    - intent: greetings
+    - action: utter_greetings
+
+- rule: Thank you
+  steps:
+    - intent: thanks
+    - action: utter_thanks
+    - action: utter_anything_else
+
+- rule: Bot
+  steps:
+    - intent: bot
+    - action: utter_bot
+    - action: utter_anything_else
+
+- rule: Ask for insurance
+  steps:
+    - intent: need_insurance
+    - action: utter_insurance
+
+- rule: Ask for insurance car
+  steps:
+    - intent: need_insurance_car
+    - action: utter_insurance_car
+
+- rule: CMB Activate (by user)
+  steps:
+    - intent: cmb_activate
+    - action: cmb_form
+    - active_loop: cmb_form
+
+- rule: CMB Submit
+  condition:
+    - active_loop: cmb_form
+  steps:
+    - action: cmb_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_cmb_values
+    - action: utter_anything_else
+
+- rule: Car not found => Better call
+  steps:
+  - intent: car_not_found
+  - action: utter_better_call
+
+- rule: Better call - Affirm
+  steps:
+  - action: utter_better_call
+  - intent: affirm
+  - action: cmb_form
+  - active_loop: cmb_form
+
+- rule: Better call - Deny
+  steps:
+  - action: utter_better_call
+  - intent: deny
+  - action: utter_car_not_found_call_denied
+  - action: utter_anything_else
+
+- rule: Favourite Pokemon
+  steps:
+  - intent: favourite_pokemon
+  - action: utter_favourite_pokemon
+
+- rule: Cancel insurance after booking
+  steps:
+  - intent: cancel_insurance_after_booking
+  - action: utter_cancel_insurance_after_booking
+
+- rule: Cancel insurance
+  steps:
+  - intent: cancel_insurance
+  - action: utter_cancel_insurance
+
+- rule: Compare insurance documentation needed
+  steps:
+  - intent: compare_insurance_needed_documentation
+  - action: utter_compare_insurance_needed_documentation
+
+- rule: Is insurance mandatory?
+  steps:
+  - intent: is_insurance_mandatory
+  - action: utter_is_insurance_mandatory
+
+- rule: What is mandatory civil liability?
+  steps:
+  - intent: what_is_mandatory_civil_liability
+  - action: utter_what_is_mandatory_civil_liability

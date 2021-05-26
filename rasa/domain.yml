@@ -1,0 +1,84 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greetings
+  - thanks
+  - bot
+  - cmb_activate
+  - need_insurance
+  - inform
+  - need_insurance_car
+  - car_not_found
+  - affirm
+  - deny
+  - favourite_pokemon
+  - cancel_insurance_after_booking
+  - cancel_insurance
+  - compare_insurance_needed_documentation
+  - is_insurance_mandatory
+  - what_is_mandatory_civil_liability
+
+entities:
+- cmb_name
+- cmb_phone
+slots:
+  cmb_name:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  cmb_phone:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+responses:
+  utter_greetings:
+  - text: Hola! ¿En qué puedo ayudarte?
+  utter_thanks:
+  - text: Es un placer :)
+  utter_bot:
+  - text: Mi nombre es Lukas, qué más da lo que sea :)
+  utter_anything_else:
+  - text: ¿Puedo ayudarte en algo más?
+  utter_insurance:
+  - text: ¿De qué tipo de seguro estamos hablando?
+  utter_insurance_car:
+  - text: 'Mira aqui: <web>'
+  utter_ask_cmb_name:
+  - text: ¿Cual es tu nombre?
+  utter_ask_cmb_phone:
+  - text: ¿Cual es tu número de teléfono?
+  utter_cmb_values:
+  - text: '{cmb_name}, pronto te llamaremos al teléfono: {cmb_phone}'
+  utter_better_call:
+  - text: '¿Deseas que un agente te llame para poder continuar?'
+  utter_car_not_found_call_denied:
+  - text: 'Qué lástima! Estamos 24h para tí si nos necesitas'
+  utter_favourite_pokemon:
+  - text: 'Dude ... Gardevoir is awesome!'
+  utter_cancel_insurance_after_booking:
+  - text: 'Tienes 14 dias desde la contratacion para anular la contratación de cualquiera de nuestros seguros, para ello solo debes ponerte en contacto con nosotros en el numero <teléfono>, o en el mail <email>'
+  utter_cancel_insurance:
+  - text: 'La ley del contrato de seguros indica que la no renovación de una poliza debe notificarse a la compañía aseguradora con un minimo de un mes de antelación al vencimiento pero si es una nueva contratación podrás notificar la anulación el los siguientes 14 dias naturales'
+  utter_compare_insurance_needed_documentation:
+  - text: 'Los datos exactos del vehículo, de los conductores y del seguro anterior en caso de que lo haya. Puedes realizar la comparacion en <email>'
+  utter_is_insurance_mandatory:
+  - text: 'La ley obliga a que todo vehículo a motor tenga como minimo contratado un seguro de responsabilidad civil'
+  utter_what_is_mandatory_civil_liability:
+  - text: 'Cubre los daños ocasionados a terceros'
+
+actions:
+- utter_anything_else
+- utter_cmb_values
+- utter_insurance
+- utter_insurance_car
+forms:
+  cmb_form:
+    cmb_name:
+    - type: from_entity
+      entity: cmb_name
+    cmb_phone:
+    - type: from_entity
+      entity: cmb_phone

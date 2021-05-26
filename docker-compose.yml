@@ -1,0 +1,57 @@
+version: "3.3"
+
+services:
+
+    rasa:
+        tty: true
+        container_name: rasa-bot
+        build:
+            context: ./docker/rasa
+        # ports:
+            # - "20201:5005"
+        volumes:
+            - "./rasa:/rasa"
+        networks: 
+            - network_api
+
+    db:
+        container_name: rasa-db
+        image: mysql:8.0
+        command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: rasa
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+            MYSQL_ROOT_HOST: '%'
+        volumes:
+            - './docker/db/sql:/docker-entrypoint-initdb.d'
+        networks: 
+            - network_api
+
+    api:
+        tty: true
+        container_name: rasa-api
+        build:
+            context: ./docker/api
+        ports:
+            - "20202:80"
+        volumes:
+            - "./api:/api"
+        networks: 
+            - network_api
+        depends_on:
+            - db
+
+    front:
+        container_name: rasa-front
+        build:
+            context: ./docker/front
+        ports:
+            - "20203:80"
+        volumes:
+            - "./front:/application"
+
+
+networks:
+    network_api:
+        external: true

@@ -1,0 +1,9 @@
+.el-button {
+  &.is-disabled {
+    &:hover {
+      background-color: inherit;
+      border: inherit;
+      color: inherit;
+    }
+  }
+}
